@@ -11,15 +11,12 @@ module dataMemory(
 
     reg [7:0] mem [0:255];
 
-    always @(posedge clk)begin
+    assign read_value = mem[address];
 
+    always @(posedge clk)begin
 
         if(ena)
             mem[address] <= write_value;
-
-        read_value <= mem[address];
-
-
 
     end
 

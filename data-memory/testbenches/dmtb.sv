@@ -17,26 +17,35 @@ module dmtb();
 
     integer i;
     always #1 clk=~clk;
+    integer failcount;
 
     initial begin
 
         #1;
+        failcount=0;
 
         for(i=0; i<10; i=i+1)begin
 
             @(negedge clk)
-            ena=$urandom;
+            ena=1;
             address=$urandom;
             write_value=$urandom;
 
             @(negedge clk)
-            ena=$urandom;
-            write_value=$urandom;
+            ena=0;
+
+            if(read_value!=write_value)
+                failcount=failcount+1;
 
 
         end
 
         #1;
+
+        if(failcount>0)
+                $display("FAILED %d RANDOM TESTS", failcount);
+            else
+                $display("PASSED ALL RANDOM TESTS");
 
         $finish;
 
