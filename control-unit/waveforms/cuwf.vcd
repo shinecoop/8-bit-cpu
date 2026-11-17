@@ -1,0 +1,402 @@
+$date
+	Tue Nov 17 02:13:14 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module cutb $end
+$var wire 8 ! result [7:0] $end
+$var wire 4 " flags [3:0] $end
+$var wire 1 # cout $end
+$var wire 2 $ ALUControl [1:0] $end
+$var reg 8 % a [7:0] $end
+$var reg 8 & b [7:0] $end
+$var reg 1 ' clk $end
+$var reg 32 ( instruction [31:0] $end
+$scope module alu $end
+$var wire 8 ) a [7:0] $end
+$var wire 8 * b [7:0] $end
+$var wire 9 + sub [8:0] $end
+$var wire 2 , control [1:0] $end
+$var wire 9 - add [8:0] $end
+$var parameter 32 . WIDTH $end
+$var reg 1 # cout $end
+$var reg 4 / flags [3:0] $end
+$var reg 8 0 result [7:0] $end
+$scope module adder $end
+$var wire 8 1 a [7:0] $end
+$var wire 8 2 b [7:0] $end
+$var wire 1 3 cin $end
+$var wire 1 4 cout $end
+$var wire 8 5 sum [7:0] $end
+$var parameter 32 6 WIDTH $end
+$scope begin fa_instances[0] $end
+$var parameter 2 7 i $end
+$scope module fa $end
+$var wire 1 8 a $end
+$var wire 1 9 b $end
+$var wire 1 : cin $end
+$var wire 1 ; cout $end
+$var wire 1 < sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[1] $end
+$var parameter 2 = i $end
+$scope module fa $end
+$var wire 1 > a $end
+$var wire 1 ? b $end
+$var wire 1 ; cin $end
+$var wire 1 @ cout $end
+$var wire 1 A sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[2] $end
+$var parameter 3 B i $end
+$scope module fa $end
+$var wire 1 C a $end
+$var wire 1 D b $end
+$var wire 1 @ cin $end
+$var wire 1 E cout $end
+$var wire 1 F sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[3] $end
+$var parameter 3 G i $end
+$scope module fa $end
+$var wire 1 H a $end
+$var wire 1 I b $end
+$var wire 1 E cin $end
+$var wire 1 J cout $end
+$var wire 1 K sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[4] $end
+$var parameter 4 L i $end
+$scope module fa $end
+$var wire 1 M a $end
+$var wire 1 N b $end
+$var wire 1 J cin $end
+$var wire 1 O cout $end
+$var wire 1 P sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[5] $end
+$var parameter 4 Q i $end
+$scope module fa $end
+$var wire 1 R a $end
+$var wire 1 S b $end
+$var wire 1 O cin $end
+$var wire 1 T cout $end
+$var wire 1 U sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[6] $end
+$var parameter 4 V i $end
+$scope module fa $end
+$var wire 1 W a $end
+$var wire 1 X b $end
+$var wire 1 T cin $end
+$var wire 1 Y cout $end
+$var wire 1 Z sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[7] $end
+$var parameter 4 [ i $end
+$scope module fa $end
+$var wire 1 \ a $end
+$var wire 1 ] b $end
+$var wire 1 Y cin $end
+$var wire 1 ^ cout $end
+$var wire 1 _ sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module subber $end
+$var wire 8 ` a [7:0] $end
+$var wire 8 a b [7:0] $end
+$var wire 1 b cin $end
+$var wire 1 c cout $end
+$var wire 8 d sum [7:0] $end
+$var parameter 32 e WIDTH $end
+$scope begin fa_instances[0] $end
+$var parameter 2 f i $end
+$scope module fa $end
+$var wire 1 g a $end
+$var wire 1 h b $end
+$var wire 1 i cin $end
+$var wire 1 j cout $end
+$var wire 1 k sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[1] $end
+$var parameter 2 l i $end
+$scope module fa $end
+$var wire 1 m a $end
+$var wire 1 n b $end
+$var wire 1 j cin $end
+$var wire 1 o cout $end
+$var wire 1 p sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[2] $end
+$var parameter 3 q i $end
+$scope module fa $end
+$var wire 1 r a $end
+$var wire 1 s b $end
+$var wire 1 o cin $end
+$var wire 1 t cout $end
+$var wire 1 u sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[3] $end
+$var parameter 3 v i $end
+$scope module fa $end
+$var wire 1 w a $end
+$var wire 1 x b $end
+$var wire 1 t cin $end
+$var wire 1 y cout $end
+$var wire 1 z sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[4] $end
+$var parameter 4 { i $end
+$scope module fa $end
+$var wire 1 | a $end
+$var wire 1 } b $end
+$var wire 1 y cin $end
+$var wire 1 ~ cout $end
+$var wire 1 !" sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[5] $end
+$var parameter 4 "" i $end
+$scope module fa $end
+$var wire 1 #" a $end
+$var wire 1 $" b $end
+$var wire 1 ~ cin $end
+$var wire 1 %" cout $end
+$var wire 1 &" sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[6] $end
+$var parameter 4 '" i $end
+$scope module fa $end
+$var wire 1 (" a $end
+$var wire 1 )" b $end
+$var wire 1 %" cin $end
+$var wire 1 *" cout $end
+$var wire 1 +" sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[7] $end
+$var parameter 4 ," i $end
+$scope module fa $end
+$var wire 1 -" a $end
+$var wire 1 ." b $end
+$var wire 1 *" cin $end
+$var wire 1 /" cout $end
+$var wire 1 0" sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module dut $end
+$var wire 32 1" instruction [31:0] $end
+$var wire 5 2" rd [4:0] $end
+$var wire 5 3" r2 [4:0] $end
+$var wire 5 4" r1 [4:0] $end
+$var wire 7 5" opcode [6:0] $end
+$var wire 12 6" imm [11:0] $end
+$var wire 7 7" func7 [6:0] $end
+$var wire 3 8" func3 [2:0] $end
+$var parameter 32 9" ADDWIDTH $end
+$var reg 2 :" ALUControl [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101 9"
+b111 ,"
+b110 '"
+b101 ""
+b100 {
+b11 v
+b10 q
+b1 l
+b0 f
+b1000 e
+b111 [
+b110 V
+b101 Q
+b100 L
+b11 G
+b10 B
+b1 =
+b0 7
+b1000 6
+b1000 .
+$end
+#0
+$dumpvars
+bx :"
+bx 8"
+bx 7"
+bx 6"
+bx 5"
+bx 4"
+bx 3"
+bx 2"
+bx 1"
+00"
+1/"
+1."
+0-"
+0+"
+1*"
+1)"
+0("
+0&"
+1%"
+1$"
+0#"
+0!"
+1~
+1}
+0|
+0z
+1y
+1x
+0w
+0u
+1t
+1s
+0r
+0p
+1o
+1n
+0m
+0k
+1j
+0i
+1h
+1g
+b0 d
+1c
+0b
+b11111111 a
+b1 `
+0_
+0^
+0]
+0\
+0Z
+0Y
+0X
+0W
+0U
+0T
+0S
+0R
+0P
+0O
+0N
+0M
+0K
+0J
+0I
+0H
+0F
+0E
+0D
+0C
+1A
+0@
+0?
+0>
+0<
+1;
+0:
+19
+18
+b10 5
+04
+03
+b1 2
+b1 1
+bx 0
+bx /
+b10 -
+bx ,
+b100000000 +
+b1 *
+b1 )
+bx (
+0'
+b1 &
+b1 %
+bx $
+x#
+bx "
+bx !
+$end
+#1
+b0 "
+b0 /
+0#
+b10 !
+b10 0
+b0 $
+b0 ,
+b0 :"
+b110011 5"
+b0 2"
+b0 8"
+b0 4"
+b0 3"
+b0 7"
+b0 6"
+b110011 (
+b110011 1"
+1'
+#2
+b101 "
+b101 /
+1#
+b0 !
+b0 0
+b1 $
+b1 ,
+b1 :"
+b100000 7"
+b10000000000 6"
+b1000000000000000000000000110011 (
+b1000000000000000000000000110011 1"
+0'
+#3
+b0 "
+b0 /
+b1 !
+b1 0
+b11 $
+b11 ,
+b11 :"
+b111 8"
+b0 7"
+b0 6"
+b111000000110011 (
+b111000000110011 1"
+1'
+#4
+b10 $
+b10 ,
+b10 :"
+b110 8"
+b110000000110011 (
+b110000000110011 1"
+0'
+#5
+1'
