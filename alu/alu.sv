@@ -1,6 +1,6 @@
 module alu #(parameter int WIDTH=8) (
 
-    input [1:0] control,
+    input [2:0] control,
     input [7:0] a,
     input [7:0] b,
 
@@ -24,17 +24,17 @@ always @(*) begin
 
     //determining result value with ripple-carry adder module
     case(control)
-        2'b00: begin
+        3'b000: begin
             result = adder.sum;
             cout = add[WIDTH];
         end
-        2'b01: begin
+        3'b001: begin
             result = subber.sum;
             cout = sub[WIDTH];
         end
-        2'b10:
+        3'b010:
             result = a | b;
-        2'b11:
+        3'b011:
             result = a & b;
     endcase
 

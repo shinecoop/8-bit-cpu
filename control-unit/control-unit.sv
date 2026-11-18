@@ -2,7 +2,8 @@ module controlUnit #(ADDWIDTH=5)(
 
     input logic [31:0] instruction,
     //output logic PCSrc, ResultSrc, ALUSrc, RegWrite, MemWrite,
-    output logic [1:0] ALUControl//, ImmSrc
+    output logic RegWrite, ResultSrc,
+    output logic [2:0] ALUControl//, ImmSrc
 
 );
 
@@ -30,6 +31,9 @@ module controlUnit #(ADDWIDTH=5)(
 
     always @(*) begin
 
+        RegWrite=1'b0;
+        ResultSrc=1'b0;
+
         case(opcode)
             7'b0110011: begin //
 
@@ -39,35 +43,41 @@ module controlUnit #(ADDWIDTH=5)(
                         case(func3)
 
                             3'b000: begin //ADD
-                                ALUControl=2'b00;
+                                ALUControl=3'b000;
+                                RegWrite=1'b1;
                             end
 
                             3'b110: begin //OR
-                                ALUControl=2'b10;
+                                ALUControl=3'b010;
                             end
 
                             3'b111: begin   //AND
-                                ALUControl=2'b11;
+                                ALUControl=3'b011;
                             end
 
 
-                        default: ALUControl=2'b00;
+                        default: ALUControl=3'bxx;
 
                         endcase
 
                     end
 
                     7'b0100000: begin //SUB
-                        ALUControl=2'b01;
+                        ALUControl=3'b001;
                     end
 
-                    default: ALUControl=2'b00;
+                    default: ALUControl=3'bxx;
 
                 endcase
 
             end
 
-            default: ALUControl=2'b00;
+            default begin
+                ALUControl=3'bxx;
+                RegWrite=1'b0;
+                ResultSrc=1'b0; //default write alu result value
+
+            end
         endcase
 
     end

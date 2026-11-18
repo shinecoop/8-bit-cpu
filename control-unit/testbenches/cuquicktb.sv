@@ -7,6 +7,14 @@ module cutb();
     logic cout;
     logic [3:0] flags;
 
+    //RISC-V instructions
+    logic[31:0] add = 31'b0000000_00000_00000_000_00000_0110011;
+    logic[31:0] sub = 31'b0100000_00000_00000_000_00000_0110011;
+    logic[31:0] andd = 31'b0000000_00000_00000_111_00000_0110011;
+    logic[31:0] orr = 31'b0000000_00000_00000_110_00000_0110011;
+
+
+
 
     controlUnit #(
     	.ADDWIDTH(5)
@@ -35,18 +43,18 @@ module cutb();
         b=8'b00000001;
 
         #1
-        instruction=31'b0000000_00000_00000_000_00000_0110011; //ADD
+        instruction=add; //ADD
 
         //alucontrol should update, updating result
 
         #1
-        instruction=31'b0100000_00000_00000_000_00000_0110011; //sub
+        instruction=sub; //sub
 
         #1
-        instruction=31'b0000000_00000_00000_111_00000_0110011; //and
+        instruction=andd; //and
 
         #1
-        instruction=31'b0000000_00000_00000_110_00000_0110011; //or
+        instruction=orr; //or
 
         #1
 

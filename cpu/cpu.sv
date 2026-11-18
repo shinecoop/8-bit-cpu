@@ -7,7 +7,7 @@ module riscvsingle #(ADDWIDTH=5) (
 );
 
     //initialize PC
-    logic regWrite, memWrite;
+    logic regWrite, memWrite, resultSrc;
     logic[4:0] pc = 0; //FIX: make wider later?
     logic[31:0] instruction;
     logic[2:0] alucontrol;
@@ -18,9 +18,8 @@ module riscvsingle #(ADDWIDTH=5) (
     //MODULES
 
 
-    //TEMP
-    assign regWrite=1'b0;
-    assign memWrite=1'b1;
+    //assign regWrite=1'b0;
+    assign memWrite=1'b0;
     //instruction memory
     // recieves address (pc) and returns the instruction at that index
 
@@ -34,6 +33,8 @@ module riscvsingle #(ADDWIDTH=5) (
 
     controlUnit #(5) controlUnit (
 	.instruction(instruction),
+	.RegWrite(regWrite),
+	.ResultSrc(resultSrc),
 	.ALUControl (alucontrol)
     );
 
@@ -47,7 +48,7 @@ module riscvsingle #(ADDWIDTH=5) (
 	.ad3(instruction[7+ADDWIDTH-1:7]),
 	.ad1(instruction[7+ADDWIDTH+3+5-1:7+ADDWIDTH+3]),
 	.ad2(instruction[7+ADDWIDTH+3+5+5-1:7+ADDWIDTH+3+5]),
-	.w  (dataRead),
+	.w  (resultSrc ? dataRead : aluResult),
 	.r1 (r1),
 	.r2 (r2)
     );
