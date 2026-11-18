@@ -1,0 +1,460 @@
+$date
+	Wed Nov 18 02:09:12 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module cputb $end
+$var wire 8 ! data [7:0] $end
+$var wire 5 " address [4:0] $end
+$var reg 32 # add [31:0] $end
+$var reg 32 $ andd [31:0] $end
+$var reg 1 % clk $end
+$var reg 32 & orr [31:0] $end
+$var reg 32 ' sub [31:0] $end
+$scope module dut $end
+$var wire 1 % clk $end
+$var wire 1 ( memWrite $end
+$var wire 1 ) regWrite $end
+$var wire 8 * r2 [7:0] $end
+$var wire 8 + r1 [7:0] $end
+$var wire 32 , instruction [31:0] $end
+$var wire 4 - flags [3:0] $end
+$var wire 8 . dataRead [7:0] $end
+$var wire 1 / carry $end
+$var wire 3 0 alucontrol [2:0] $end
+$var wire 8 1 aluResult [7:0] $end
+$var parameter 32 2 ADDWIDTH $end
+$var reg 6 3 address [5:0] $end
+$var reg 9 4 data [8:0] $end
+$var reg 5 5 pc [4:0] $end
+$scope module alu $end
+$var wire 9 6 sub [8:0] $end
+$var wire 3 7 control [2:0] $end
+$var wire 8 8 b [7:0] $end
+$var wire 9 9 add [8:0] $end
+$var wire 8 : a [7:0] $end
+$var parameter 32 ; WIDTH $end
+$var reg 1 / cout $end
+$var reg 4 < flags [3:0] $end
+$var reg 8 = result [7:0] $end
+$scope module adder $end
+$var wire 1 > cin $end
+$var wire 1 ? cout $end
+$var wire 8 @ sum [7:0] $end
+$var wire 8 A b [7:0] $end
+$var wire 8 B a [7:0] $end
+$var parameter 32 C WIDTH $end
+$scope begin fa_instances[0] $end
+$var parameter 2 D i $end
+$scope module fa $end
+$var wire 1 E a $end
+$var wire 1 F b $end
+$var wire 1 G cin $end
+$var wire 1 H cout $end
+$var wire 1 I sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[1] $end
+$var parameter 2 J i $end
+$scope module fa $end
+$var wire 1 K a $end
+$var wire 1 L b $end
+$var wire 1 H cin $end
+$var wire 1 M cout $end
+$var wire 1 N sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[2] $end
+$var parameter 3 O i $end
+$scope module fa $end
+$var wire 1 P a $end
+$var wire 1 Q b $end
+$var wire 1 M cin $end
+$var wire 1 R cout $end
+$var wire 1 S sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[3] $end
+$var parameter 3 T i $end
+$scope module fa $end
+$var wire 1 U a $end
+$var wire 1 V b $end
+$var wire 1 R cin $end
+$var wire 1 W cout $end
+$var wire 1 X sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[4] $end
+$var parameter 4 Y i $end
+$scope module fa $end
+$var wire 1 Z a $end
+$var wire 1 [ b $end
+$var wire 1 W cin $end
+$var wire 1 \ cout $end
+$var wire 1 ] sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[5] $end
+$var parameter 4 ^ i $end
+$scope module fa $end
+$var wire 1 _ a $end
+$var wire 1 ` b $end
+$var wire 1 \ cin $end
+$var wire 1 a cout $end
+$var wire 1 b sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[6] $end
+$var parameter 4 c i $end
+$scope module fa $end
+$var wire 1 d a $end
+$var wire 1 e b $end
+$var wire 1 a cin $end
+$var wire 1 f cout $end
+$var wire 1 g sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[7] $end
+$var parameter 4 h i $end
+$scope module fa $end
+$var wire 1 i a $end
+$var wire 1 j b $end
+$var wire 1 f cin $end
+$var wire 1 k cout $end
+$var wire 1 l sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module subber $end
+$var wire 8 m b [7:0] $end
+$var wire 1 n cin $end
+$var wire 1 o cout $end
+$var wire 8 p sum [7:0] $end
+$var wire 8 q a [7:0] $end
+$var parameter 32 r WIDTH $end
+$scope begin fa_instances[0] $end
+$var parameter 2 s i $end
+$scope module fa $end
+$var wire 1 t a $end
+$var wire 1 u b $end
+$var wire 1 v cin $end
+$var wire 1 w cout $end
+$var wire 1 x sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[1] $end
+$var parameter 2 y i $end
+$scope module fa $end
+$var wire 1 z a $end
+$var wire 1 { b $end
+$var wire 1 w cin $end
+$var wire 1 | cout $end
+$var wire 1 } sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[2] $end
+$var parameter 3 ~ i $end
+$scope module fa $end
+$var wire 1 !" a $end
+$var wire 1 "" b $end
+$var wire 1 | cin $end
+$var wire 1 #" cout $end
+$var wire 1 $" sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[3] $end
+$var parameter 3 %" i $end
+$scope module fa $end
+$var wire 1 &" a $end
+$var wire 1 '" b $end
+$var wire 1 #" cin $end
+$var wire 1 (" cout $end
+$var wire 1 )" sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[4] $end
+$var parameter 4 *" i $end
+$scope module fa $end
+$var wire 1 +" a $end
+$var wire 1 ," b $end
+$var wire 1 (" cin $end
+$var wire 1 -" cout $end
+$var wire 1 ." sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[5] $end
+$var parameter 4 /" i $end
+$scope module fa $end
+$var wire 1 0" a $end
+$var wire 1 1" b $end
+$var wire 1 -" cin $end
+$var wire 1 2" cout $end
+$var wire 1 3" sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[6] $end
+$var parameter 4 4" i $end
+$scope module fa $end
+$var wire 1 5" a $end
+$var wire 1 6" b $end
+$var wire 1 2" cin $end
+$var wire 1 7" cout $end
+$var wire 1 8" sum $end
+$upscope $end
+$upscope $end
+$scope begin fa_instances[7] $end
+$var parameter 4 9" i $end
+$scope module fa $end
+$var wire 1 :" a $end
+$var wire 1 ;" b $end
+$var wire 1 7" cin $end
+$var wire 1 <" cout $end
+$var wire 1 =" sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module controlUnit $end
+$var wire 5 >" rd [4:0] $end
+$var wire 5 ?" r2 [4:0] $end
+$var wire 5 @" r1 [4:0] $end
+$var wire 7 A" opcode [6:0] $end
+$var wire 32 B" instruction [31:0] $end
+$var wire 12 C" imm [11:0] $end
+$var wire 7 D" func7 [6:0] $end
+$var wire 3 E" func3 [2:0] $end
+$var parameter 32 F" ADDWIDTH $end
+$var reg 3 G" ALUControl [2:0] $end
+$upscope $end
+$scope module dataMemory $end
+$var wire 8 H" address [7:0] $end
+$var wire 1 % clk $end
+$var wire 1 ( ena $end
+$var wire 8 I" read_value [7:0] $end
+$var wire 8 J" write_value [7:0] $end
+$upscope $end
+$scope module instmem $end
+$var wire 5 K" a [4:0] $end
+$var wire 32 L" r [31:0] $end
+$var reg 32 M" add [31:0] $end
+$var reg 32 N" andd [31:0] $end
+$var reg 32 O" orr [31:0] $end
+$var reg 32 P" sub [31:0] $end
+$upscope $end
+$scope module regfile $end
+$var wire 5 Q" ad1 [4:0] $end
+$var wire 5 R" ad2 [4:0] $end
+$var wire 5 S" ad3 [4:0] $end
+$var wire 1 % clk $end
+$var wire 8 T" r1 [7:0] $end
+$var wire 8 U" r2 [7:0] $end
+$var wire 8 V" w [7:0] $end
+$var wire 1 ) wena $end
+$var parameter 32 W" ADDWIDTH $end
+$var integer 32 X" i [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101 W"
+b101 F"
+b111 9"
+b110 4"
+b101 /"
+b100 *"
+b11 %"
+b10 ~
+b1 y
+b0 s
+b1000 r
+b111 h
+b110 c
+b101 ^
+b100 Y
+b11 T
+b10 O
+b1 J
+b0 D
+b1000 C
+b1000 ;
+b101 2
+$end
+#0
+$dumpvars
+b10100 X"
+bx V"
+b1 U"
+b1 T"
+b0 S"
+b10 R"
+b1 Q"
+b1000000001000001000000000110011 P"
+b1000001110000000110011 O"
+b1000001111000000110011 N"
+b1000001000000000110011 M"
+b1000001000000000110011 L"
+b0 K"
+b1 J"
+bx I"
+b10 H"
+b0 G"
+b0 E"
+b0 D"
+b10 C"
+b1000001000000000110011 B"
+b110011 A"
+b1 @"
+b10 ?"
+b0 >"
+0="
+1<"
+1;"
+0:"
+08"
+17"
+16"
+05"
+03"
+12"
+11"
+00"
+0."
+1-"
+1,"
+0+"
+0)"
+1("
+1'"
+0&"
+0$"
+1#"
+1""
+0!"
+0}
+1|
+1{
+0z
+0x
+1w
+0v
+1u
+1t
+b1 q
+b0 p
+1o
+0n
+b11111111 m
+0l
+0k
+0j
+0i
+0g
+0f
+0e
+0d
+0b
+0a
+0`
+0_
+0]
+0\
+0[
+0Z
+0X
+0W
+0V
+0U
+0S
+0R
+0Q
+0P
+1N
+0M
+0L
+0K
+0I
+1H
+0G
+1F
+1E
+b1 B
+b1 A
+b10 @
+0?
+0>
+b10 =
+b0 <
+b1 :
+b10 9
+b1 8
+b0 7
+b100000000 6
+b0 5
+bx 4
+bx 3
+b10 1
+b0 0
+0/
+bx .
+b0 -
+b1000001000000000110011 ,
+b1 +
+b1 *
+0)
+1(
+b1000000000000000000000000110011 '
+b110000000110011 &
+0%
+b111000000110011 $
+b110011 #
+bx "
+bx !
+$end
+#1
+b1 .
+b1 I"
+b1 V"
+b1 5
+b1 K"
+1%
+#2
+0%
+#3
+bx .
+bx I"
+bx V"
+b1 1
+b1 =
+b1 H"
+b10 0
+b10 7
+b10 G"
+b110 E"
+b1000001110000000110011 ,
+b1000001110000000110011 B"
+b1000001110000000110011 L"
+b10 5
+b10 K"
+1%
+#4
+0%
+#5
+b11 0
+b11 7
+b11 G"
+b111 E"
+b1000001111000000110011 ,
+b1000001111000000110011 B"
+b1000001111000000110011 L"
+b1 .
+b1 I"
+b1 V"
+b11 5
+b11 K"
+1%
